@@ -48,6 +48,17 @@
             <!-- End of 2nd Column -->
         </div>
         <!-- End of Row -->
+        
+        <!-- Added index.html's form -->
+        <form action="/generate" method="post">
+            <textarea name="prompt" placeholder="Enter your prompt"></textarea>
+            <button type="submit">Generate</button>
+        </form>
+        {% if response %}
+        <div>
+            <p>{{ response }}</p>
+        </div>
+        {% endif %}
     </div>
     <!-- End of Main Content -->
 {% endblock %}
